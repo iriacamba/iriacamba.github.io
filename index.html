@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <title>Iria & Alberto</title>
 
 <style>
+
 body {
   background-image:
-linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.72)),
-url('https://www.transparenttextures.com/patterns/handmade-paper.png');
+    linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.72)),
+    url('https://www.transparenttextures.com/patterns/handmade-paper.png');
+
   margin: 0;
   font-family: 'Georgia', serif;
-  background-color: #f6f2eb;
-  color: #2f352d;
+  background-color: #f5f1ea;
+  color: #3b3028;
   text-align: center;
 }
 
 /* NAV */
+
 nav {
-  background: #ffffff;
-  padding: 20px;
-  border-bottom: 1px solid #e5e0d8;
+  background: rgba(255,255,255,0.92);
+  padding: 22px;
+  border-bottom: 1px solid #ddd3c7;
   position: relative;
-  z-index: 2;
+  z-index: 10;
+  backdrop-filter: blur(8px);
 }
 
 nav a {
   margin: 0 20px;
   text-decoration: none;
-  color: #4f5b4a;
-  letter-spacing: 1px;
-  font-size: 14px;
+  color: #55624f;
+  letter-spacing: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 /* SECCIONES */
+
 section {
   display: none;
-  padding: 100px 60px 20px;
-  max-width: 800px;
+  padding: 40px 60px 40px;
+  max-width: 1100px;
   margin: auto;
   position: relative;
   z-index: 2;
@@ -48,104 +54,189 @@ section {
   display: block;
 }
 
-/* HERO FOTO */
+/* HERO SLIDESHOW */
+
 .hero {
-  height: 450px;
-  background: url('https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/NavidadVigo.jpeg') center/cover no-repeat;
-  border-radius: 12px;
+  position: relative;
+  height: 78vh;
+  min-height: 520px;
+  max-height: 900px;
+  overflow: hidden;
+  border-radius: 22px;
   margin-top: 20px;
+
+  box-shadow:
+    0 10px 40px rgba(60,40,20,0.12);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(40,30,20,0.10),
+      rgba(40,30,20,0.18)
+    );
+
+  z-index: 2;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+
+  transition: opacity 1.8s ease;
+
+  background-size: cover;
+  background-position: center top;
+}
+
+.slide.active {
+  opacity: 1;
 }
 
 /* TEXTOS */
+
 h1 {
-  font-size: 3em;
-  margin-top: 20px;
+  font-size: 3.4em;
+  margin-top: 40px;
+  margin-bottom: 10px;
   font-weight: normal;
+  color: #4d3b34;
 }
 
 h2 {
-  color: #4f5b4a;
+  color: #55624f;
   font-weight: normal;
+  letter-spacing: 1px;
 }
 
 .section-title {
-  font-size: 2em;
-  color: #4f5b4a;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #7a3e3e;
+  margin-top: 60px;
+  margin-bottom: 24px;
+
   display: inline-block;
-  border-bottom: 1px solid #c8b8a6;
+
+  border-bottom: 1px solid #cbb7aa;
+
   padding-bottom: 8px;
-  letter-spacing: 2px;
+
+  letter-spacing: 3px;
+
   font-weight: normal;
+
   text-transform: uppercase;
 }
 
 /* DETALLES */
+
 .details {
   margin-top: 30px;
-  line-height: 1.8;
+  line-height: 1.9;
+  font-size: 1.05em;
 }
 
 /* TARJETAS */
+
 .card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #e5e0d8;
+  background: rgba(255,255,255,0.92);
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5ddd3;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.05);
 }
 
-  .map-container {
+/* MAPA */
+
+.map-container {
   margin-top: 60px;
 }
 
 .map-container img {
   width: 100%;
-  max-width: 700px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  max-width: 760px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 6px 24px rgba(0,0,0,0.08);
 }
 
 /* FORM */
+
 iframe {
   border: none;
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
-/* OLIVE DECORATION */
+/* DECORACIÓN */
+
 .olive {
   position: fixed;
-  width: 180px;
-  opacity: 0.24;
+  width: 160px;
+  opacity: 0.12;
   z-index: 0;
 }
 
 .top {
-  top: 40px;
-  left: 20px;
+  top: 30px;
+  left: 10px;
 }
 
 .bottom {
-  bottom: 40px;
-  right: 20px;
+  bottom: 30px;
+  right: 10px;
 }
 
 /* MOBILE */
+
 @media (max-width: 768px) {
+
+  section {
+    padding: 20px;
+  }
+
+  .hero {
+    height: 62vh;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
   .olive {
     display: none;
   }
-}
-</style>
 
+  nav a {
+    margin: 0 10px;
+    font-size: 12px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- DECORACIÓN OLIVO -->
+<!-- DECORACIÓN -->
 
-<img src='https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/istockphoto-1251509223-612x612.jpg' class="olive top">
-<img src='https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/OlivoAbajo.jpg' class="olive bottom">
+<img src='https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/istockphoto-1251509223-612x612.jpg'
+class="olive top">
+
+<img src='https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/OlivoAbajo.jpg'
+class="olive bottom">
 
 <!-- MENU -->
 
@@ -158,68 +249,137 @@ iframe {
 <!-- INICIO -->
 
 <section id="inicio" class="active">
-  <div class="hero"></div>
 
-  <h1>Iria & Alberto</h1>
-  <h2>¡Nos casamos!</h2>
+  <!-- HERO SLIDESHOW -->
 
-<div class="details">
+  <div class="hero">
 
-  <p class="section-title">Ceremonia</p>
+    <div class="slide active"
+      style="background-image:url('https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/NavidadVigo.jpeg')">
+    </div>
 
-  <p>
-    <strong>Lugar:</strong><br>
-    Basílica de la Concepción de Nuestra Señora
-  </p>
+    <div class="slide"
+      style="background-image:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200')">
+    </div>
 
-  <p>
-    <strong>Fecha y hora:</strong><br>
-    Sábado 5 de diciembre de 2026, 13:00
-  </p>
-
-  <p class="section-title">Celebración</p>
-
-  <p>
-    Soto de Mónico
-  </p>
-
-  <div class="map-container">
-  <img src='https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/MapaFinal.png' alt="Mapa boda">
-</div>
-  
-</div>
+    <div class="slide"
+      style="background-image:url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200')">
+    </div>
 
   </div>
+
+  <h1>Iria & Alberto</h1>
+
+  <h2>¡Nos casamos!</h2>
+
+  <div class="details">
+
+    <p class="section-title">Ceremonia</p>
+
+    <p>
+      <strong>Lugar:</strong><br>
+      Basílica de la Concepción de Nuestra Señora
+    </p>
+
+    <p>
+      <strong>Fecha y hora:</strong><br>
+      Sábado 5 de diciembre de 2026, 13:00
+    </p>
+
+    <p class="section-title">Celebración</p>
+
+    <p>
+      Soto de Mónico
+    </p>
+
+    <div class="map-container">
+
+      <img
+      src='https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/MapaFinal.png'
+      alt="Mapa boda">
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- RSVP -->
 
 <section id="rsvp">
-  <div class="card">
-    <h2>Confirma tu asistencia</h2>
-    <p>Nos encantará contar contigo en nuestro día</p>
 
-```
-<!-- PEGA AQUÍ TU GOOGLE FORM -->
-<iframe src="PEGA_AQUI_TU_FORMULARIO" width="100%" height="600"></iframe>
-```
+  <div class="card">
+
+    <h2>Confirma tu asistencia</h2>
+
+    <p>
+      Nos encantará contar contigo en nuestro día
+    </p>
+
+    <!-- PEGA AQUÍ TU GOOGLE FORM -->
+
+    <iframe
+      src="PEGA_AQUI_TU_FORMULARIO"
+      width="100%"
+      height="650">
+    </iframe>
 
   </div>
+
 </section>
 
 <!-- REGALO -->
 
 <section id="regalo">
+
   <div class="card">
-              <p><strong>IBAN:</strong> ES43 1583 0001 1291 8231 0500</p>
+
+    <h2>Regalo</h2>
+
+    <p>
+      Lo más importante es compartir este día con vosotros ❤️
+    </p>
+
+    <p>
+      <strong>IBAN:</strong><br>
+      ES43 1583 0001 1291 8231 0500
+    </p>
+
   </div>
+
 </section>
 
 <script>
+
+/* CAMBIO ENTRE SECCIONES */
+
 function show(section) {
-  document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
-  document.getElementById(section).classList.add("active");
+
+  document
+    .querySelectorAll("section")
+    .forEach(s => s.classList.remove("active"));
+
+  document
+    .getElementById(section)
+    .classList.add("active");
 }
+
+/* SLIDESHOW */
+
+const slides = document.querySelectorAll('.slide');
+
+let current = 0;
+
+setInterval(() => {
+
+  slides[current].classList.remove('active');
+
+  current = (current + 1) % slides.length;
+
+  slides[current].classList.add('active');
+
+}, 4500);
+
 </script>
 
 </body>
