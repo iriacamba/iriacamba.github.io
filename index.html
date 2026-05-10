@@ -167,11 +167,13 @@ section {
 
   height: 100%;
 
-  object-fit: cover;
+  object-fit: contain;
 
-  object-position: center 20%;
+  object-position: center;
 
   border-radius: 24px;
+
+  background: #ece4da;
 }
 
 /* =========================
@@ -351,6 +353,13 @@ iframe {
     min-height: 420px;
   }
 
+  .slide img {
+
+    object-fit: cover;
+
+    object-position: center 20%;
+  }
+
   h1 {
 
     font-size: 2.4em;
@@ -404,8 +413,6 @@ class="olive bottom">
 <!-- INICIO -->
 
 <section id="inicio" class="active">
-
-  <!-- HERO -->
 
   <div class="hero">
 
@@ -511,7 +518,7 @@ class="olive bottom">
     <h2>Contacto</h2>
 
     <p>
-      Si tenéis cualquier duda, podéis escribirnos o llamarnos:
+      Si necesitáis cualquier cosa, podéis escribirnos o llamarnos:
     </p>
 
     <p style="margin-top:40px; line-height:2;">
