@@ -346,6 +346,9 @@ iframe {
   flex-direction: column;
 
   justify-content: center;
+
+  /* NUEVO */
+  min-width: 0;
 }
 
 .hotel-info h3 {
@@ -377,6 +380,11 @@ iframe {
   border-radius: 14px;
 
   border: 1px solid #ddd3c7;
+
+  /* NUEVO */
+  box-sizing: border-box;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 .codigo-box strong {
@@ -493,6 +501,14 @@ iframe {
   .hotel-info {
 
     padding: 24px;
+  }
+
+  /* NUEVO */
+  .codigo-box {
+
+    padding: 16px;
+
+    font-size: 0.95em;
   }
 }
 
