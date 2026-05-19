@@ -16,7 +16,7 @@
 body {
 
   margin: 0;
-f
+
   font-family: 'Georgia', serif;
 
   background-color: #f5f1ea;
@@ -347,7 +347,6 @@ iframe {
 
   justify-content: center;
 
-  /* NUEVO */
   min-width: 0;
 }
 
@@ -381,10 +380,17 @@ iframe {
 
   border: 1px solid #ddd3c7;
 
-  /* NUEVO */
   box-sizing: border-box;
+
   width: 100%;
+
+  max-width: 100%;
+
   overflow-wrap: break-word;
+
+  word-break: break-word;
+
+  overflow: hidden;
 }
 
 .codigo-box strong {
@@ -503,315 +509,25 @@ iframe {
     padding: 24px;
   }
 
-  /* NUEVO */
   .codigo-box {
 
     padding: 16px;
 
     font-size: 0.95em;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    overflow-wrap: break-word;
+
+    word-break: break-word;
+
+    overflow: hidden;
   }
 }
 
 </style>
 </head>
-
-<body>
-
-<!-- DECORACIÓN -->
-
-<img
-src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/istockphoto-1251509223-612x612.jpg"
-class="olive top">
-
-<img
-src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/OlivoAbajo.jpg"
-class="olive bottom">
-
-<!-- NAV -->
-
-<nav>
-
-  <a href="#" onclick="show('inicio')">Inicio</a>
-
-  <a href="#" onclick="show('rsvp')">RSVP</a>
-
-  <a href="#" onclick="show('regalo')">Regalo</a>
-
-  <a href="#" onclick="show('hoteles')">Hoteles</a>
-
-  <a href="#" onclick="show('contacto')">Contacto</a>
-
-</nav>
-
-<!-- INICIO -->
-
-<section id="inicio" class="active">
-
-  <div class="hero">
-
-    <div class="slide active">
-      <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/Background1.jpeg">
-    </div>
-
-    <div class="slide">
-      <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/Background2.jpeg">
-    </div>
-
-    <div class="slide">
-      <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/Background3.jpeg">
-    </div>
-
-    <div class="slide">
-      <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/Background4.jpeg">
-    </div>
-
-  </div>
-
-  <h1>Iria & Alberto</h1>
-
-  <h2>¡Nos casamos!</h2>
-
-  <div class="details">
-
-    <p class="section-title">Ceremonia</p>
-
-    <p>
-      <strong>Lugar:</strong><br>
-      Basílica de la Concepción de Nuestra Señora
-    </p>
-
-    <p>
-      <strong>Fecha y hora:</strong><br>
-      Sábado 5 de diciembre de 2026 · 13:00
-    </p>
-
-    <p class="section-title">Celebración</p>
-
-    <p>
-      Soto de Mónico
-    </p>
-
-    <div class="map-container">
-
-      <img
-      src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/MapaFinall.png"
-      alt="Mapa boda">
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- RSVP -->
-
-<section id="rsvp">
-
-  <div class="card">
-
-    <h2>Confirma tu asistencia</h2>
-
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfJnLEoPMS9bzN-dqMvwfJbVoZV30Urgz9SjQ_dJ4c9mKJWww/viewform?embedded=true"
-      width="100%"
-      height="900">
-    </iframe>
-
-  </div>
-
-</section>
-
-<!-- REGALO -->
-
-<section id="regalo">
-
-  <div class="card">
-
-    <h2>Regalo</h2>
-
-    <p>     
-       <strong>IBAN:</strong><br>
-      ES43 1583 0001 1291 8231 0500<br>
-
-    </p>
-
-  </div>
-
-</section>
-
-<!-- HOTELES -->
-
-<section id="hoteles">
-
-  <div class="card">
-
-    <h2>Hoteles</h2>
-
-    <p class="hoteles-texto">
-      Hay muchos hoteles donde os podéis alojar.
-      Hemos conseguido códigos de descuento en los siguientes hoteles,
-      muy cercanos a la Basílica de la Concepción de Goya,
-      que os dejamos aquí abajo.
-    </p>
-
-    <!-- HOTEL 1 -->
-
-    <div class="hotel-card">
-
-      <a
-        href="https://www.nh-hotels.com/en/hotel/nh-collection-madrid-colon?utm_campaign=local-gmb&utm_medium=organic_search&utm_source=google_gmb"
-        target="_blank"
-        class="hotel-link">
-
-        <div class="hotel-img">
-
-          <img
-            src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/NHCollection.png"
-            alt="NH Collection Colón">
-
-        </div>
-
-        <div class="hotel-info">
-
-          <h3>NH Collection Colón</h3>
-
-          <div class="hotel-direccion">
-            C. del Marqués de Zurgena, 4<br>
-            Salamanca, 28001 Madrid
-          </div>
-
-          <div class="codigo-box">
-
-             <strong>Código de descuento</strong>
-
- Aquí podéis añadir cómo funciona el código de descuento.
-           
-
-          </div>
-
-        </div>
-
-      </a>
-
-    </div>
-
-    <!-- HOTEL 2 -->
-
-    <div class="hotel-card">
-
-      <a
-        href="https://www.vinccisoma.com/"
-        target="_blank"
-        class="hotel-link">
-
-        <div class="hotel-img">
-
-          <img
-            src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/VincciSoma.png"
-            alt="Vincci Soma Hotel">
-
-        </div>
-
-        <div class="hotel-info">
-
-          <h3>Vincci Soma Hotel</h3>
-
-          <div class="hotel-direccion">
-            Calle de Goya, 79<br>
-            Salamanca, 28001 Madrid
-          </div>
-
-          <div class="codigo-box">
-
-            <strong>Código de descuento</strong>
-
-             
-              Introducir el siguiente código al reservar para obtener un 15% de descuento: <strong>"IRIAYALBERTO"</strong>
-  <br><br>
-  Please add the following code when booking for a 15% discount:
-  <strong>"IRIAYALBERTO"</strong>
-
-          </div>
-
-        </div>
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CONTACTO -->
-
-<section id="contacto">
-
-  <div class="card">
-
-    <h2>Contacto</h2>
-
-    <p>
-      Si tenéis cualquier duda relacionada con la boda, podéis escribirnos o llamarnos:
-    </p>
-
-    <p style="margin-top:40px; line-height:2;">
-
-      <strong>Iria</strong><br>
-      697 246 049
-
-      <br><br>
-
-      <strong>Alberto</strong><br>
-      677 666 393
-
-    </p>
-
-  </div>
-
-</section>
-
-<script>
-
-/* =========================
-   CAMBIO SECCIONES
-========================= */
-
-function show(section) {
-
-  document
-    .querySelectorAll("section")
-    .forEach(s => s.classList.remove("active"));
-
-  document
-    .getElementById(section)
-    .classList.add("active");
-
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-
-/* =========================
-   SLIDESHOW
-========================= */
-
-const slides = document.querySelectorAll('.slide');
-
-let current = 0;
-
-setInterval(() => {
-
-  slides[current].classList.remove('active');
-
-  current = (current + 1) % slides.length;
-
-  slides[current].classList.add('active');
-
-}, 4500);
-
-</script>
-
-</body>
-</html>
