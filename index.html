@@ -9,18 +9,10 @@
 
 <style>
 
-/* =========================
-   BODY
-========================= */
-
 body {
-
   margin: 0;
-
   font-family: 'Georgia', serif;
-
   background-color: #f5f1ea;
-
   background-image:
     linear-gradient(
       rgba(255,255,255,0.72),
@@ -29,182 +21,305 @@ body {
     url('https://www.transparenttextures.com/patterns/handmade-paper.png');
 
   color: #3b3028;
-
   text-align: center;
 }
 
-/* =========================
-   NAV
-========================= */
-   nav {
+nav {
+  background: rgba(255,255,255,0.92);
+  padding: 22px;
+  border-bottom: 1px solid #ddd3c7;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
 }
 
-/* =========================
-   SECCIONES
-========================= */
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #55624f;
+  letter-spacing: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
 
 section {
-
   display: none;
-
   opacity: 0;
-
+  transition: opacity 0.4s ease;
   padding: 30px 24px 60px;
-
   max-width: 1100px;
-
   margin: auto;
-
-  transition: opacity 0.45s ease;
 }
 
 .active {
-
   display: block;
-
   opacity: 1;
 }
 
-/* =========================
-   HERO
-========================= */
-
 .hero {
-
   position: relative;
-
   width: 100%;
-
   height: 72vh;
-
   min-height: 520px;
-
   max-height: 900px;
-
   overflow: hidden;
-
   border-radius: 24px;
-
   margin-top: 20px;
-
-  background: transparent;
 }
 
-/* =========================
-   SLIDES
-========================= */
 .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.6s ease;
+}
 
-  margin-bottom: 24px;
+.slide.active {
+  opacity: 1;
+}
 
-  display: inline-block;
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 24px;
+}
 
-  border-bottom: 1px solid #cbb7aa;
-
-  padding-bottom: 8px;
-
-  letter-spacing: 3px;
-
+h1 {
+  font-size: 3.6em;
+  margin-top: 42px;
+  margin-bottom: 8px;
   font-weight: normal;
+  color: #4d3b34;
+}
 
+h2 {
+  color: #55624f;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: 1.8em;
+  color: #7a3e3e;
+  margin-top: 60px;
+  margin-bottom: 24px;
+  display: inline-block;
+  border-bottom: 1px solid #cbb7aa;
+  padding-bottom: 8px;
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-/* =========================
-   TEXTOS
-========================= */
-
 .details {
-
   margin-top: 30px;
-
   line-height: 1.9;
-
   font-size: 1.05em;
 }
 
-/* =========================
-   TARJETAS
-========================= */
-
 .card {
-
   background: rgba(255,255,255,0.92);
-
   padding: 42px;
-
   border-radius: 22px;
-
   border: 1px solid #e5ddd3;
-
-  box-shadow:
-    0 8px 30px rgba(0,0,0,0.05);
-
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
   margin-top: 40px;
 }
 
-/* =========================
-   MAPA
-========================= */
+.map-container {
+  margin-top: 60px;
+}
 
-   .map-container {
-
-  box-sizing: border-box;
-
+.map-container img {
   width: 100%;
+  max-width: 760px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
 
-  max-width: 100%;
+iframe {
+  border: none;
+  border-radius: 16px;
+  margin-top: 20px;
+}
 
-  overflow-wrap: break-word;
+.hoteles-texto {
+  margin-top: 25px;
+  line-height: 1.9;
+  font-size: 1.05em;
+}
 
-  word-break: break-word;
-
+.hotel-card {
+  background: rgba(255,255,255,0.96);
+  border: 1px solid #e5ddd3;
+  border-radius: 22px;
   overflow: hidden;
+  margin-top: 28px;
+  transition: 0.3s;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px);
+}
+
+.hotel-link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hotel-img {
+  width: 38%;
+}
+
+.hotel-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hotel-info {
+  width: 62%;
+  padding: 34px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.hotel-info h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #55624f;
+  font-size: 1.6em;
+  font-weight: normal;
+}
+
+.hotel-direccion {
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.codigo-box {
+  background: #f5f1ea;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #ddd3c7;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .codigo-box strong {
-
   display: block;
-
   margin-bottom: 8px;
 }
 
-/* =========================
-   DECORACIÓN
-========================= */
-
 .olive {
-
   position: fixed;
-
   width: 150px;
-
   opacity: 0.08;
-
   z-index: 0;
-
   pointer-events: none;
 }
 
 .top {
-
   top: 30px;
-
   left: 10px;
 }
 
 .bottom {
-
   bottom: 30px;
-
   right: 10px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+@media (max-width: 768px) {
 
-   @media (max-width: 768px) {
+  nav {
+    padding: 18px;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  section {
+    padding: 20px 16px 40px;
+  }
+
+  .hero {
+    height: 62vh;
+    min-height: 420px;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  .section-title {
+    font-size: 1.4em;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+
+  .olive {
+    display: none;
+  }
+
+  .hotel-link {
+    flex-direction: column;
+  }
+
+  .hotel-img,
+  .hotel-info {
+    width: 100%;
+  }
+
+  .hotel-img {
+    height: 240px;
+  }
+
+  .hotel-info {
+    padding: 24px;
+  }
+
+  .codigo-box {
+    padding: 16px;
+    font-size: 0.95em;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="javascript:void(0)" onclick="show('inicio')">Inicio</a>
+  <a href="javascript:void(0)" onclick="show('hoteles')">Hoteles</a>
+  <a href="javascript:void(0)" onclick="show('contacto')">Contacto</a>
+</nav>
+
+<section id="inicio" class="active">
+
+  <div class="hero">
+
     <div class="slide active">
       <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/Background1.jpeg">
     </div>
@@ -213,58 +328,55 @@ section {
       <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/Background2.jpeg">
     </div>
 
-    <div class="slide">
-      <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/Background3.jpeg">
-    </div>
-
-    <div class="slide">
-      <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/Background4.jpeg">
-    </div>
-
   </div>
 
   <h1>Iria & Alberto</h1>
-
   <h2>¡Nos casamos!</h2>
 
-  <div class="details">
+</section>
 
-    <p class="section-title">Ceremonia</p>
+<section id="hoteles">
 
-    <p>
-      <strong>Lugar:</strong><br>
-      Basílica de la Concepción de Nuestra Señora
-    </p>
+  <div class="card">
 
-    <p>
-      <strong>Fecha y hora:</strong><br>
-      Sábado 5 de diciembre de 2026 · 13:00
-    </p>
+    <h2>Hoteles</h2>
 
-    <p class="section-title">Celebración</p>
+    <div class="hotel-card">
 
-    <p>
-      Soto de Mónico
-    </p>
+      <a href="https://www.vinccisoma.com/" target="_blank" class="hotel-link">
 
-    <div class="map-container">
+        <div class="hotel-img">
+          <img src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/VincciSoma.png">
+        </div>
 
-      <img
-      src="https://raw.githubusercontent.com/iriacamba/iriacamba.github.io/main/MapaFinall.png"
-      alt="Mapa boda">
+        <div class="hotel-info">
+
+          <h3>Vincci Soma Hotel</h3>
+
+          <div class="hotel-direccion">
+            Calle de Goya, 79<br>
+            Salamanca, Madrid
+          </div>
+
+          <div class="codigo-box">
+
+            <strong>Código de descuento</strong>
+
+            Introducir el siguiente código al reservar para obtener un 15% de descuento:
+
+            <strong>IRIAYALBERTO</strong>
+
+          </div>
+
+        </div>
+
+      </a>
 
     </div>
 
   </div>
 
 </section>
-
-<!-- RSVP -->
-
-      <section id="rsvp">
-</section>
-
-<!-- CONTACTO -->
 
 <section id="contacto">
 
@@ -273,19 +385,9 @@ section {
     <h2>Contacto</h2>
 
     <p>
-      Si tenéis cualquier duda relacionada con la boda, podéis escribirnos o llamarnos:
-    </p>
-
-    <p style="margin-top:40px; line-height:2;">
-
-      <strong>Iria</strong><br>
-      697 246 049
-
+      Iria · 697 246 049
       <br><br>
-
-      <strong>Alberto</strong><br>
-      677 666 393
-
+      Alberto · 677 666 393
     </p>
 
   </div>
