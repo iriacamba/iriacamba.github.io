@@ -15,6 +15,10 @@
 
 body {
 
+   * {
+  box-sizing: border-box;
+}
+   
   margin: 0;
 
   font-family: 'Georgia', serif;
@@ -322,6 +326,8 @@ iframe {
 .hotel-img {
 
   width: 38%;
+
+   flex-shrink: 0;
 }
 
 .hotel-img img {
@@ -337,7 +343,7 @@ iframe {
 
 .hotel-info {
 
-  width: 62%;
+  flex: 1;
 
   padding: 34px;
 
