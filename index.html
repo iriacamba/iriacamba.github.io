@@ -10,15 +10,19 @@
 <style>
 
 /* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+/* =========================
    BODY
 ========================= */
 
-body {<f
+body {
 
-   * {
-  box-sizing: border-box;
-}
-   
   margin: 0;
 
   font-family: 'Georgia', serif;
@@ -56,11 +60,17 @@ nav {
   z-index: 100;
 
   backdrop-filter: blur(8px);
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
 }
 
 nav a {
-
-  margin: 0 20px;
 
   text-decoration: none;
 
@@ -73,6 +83,16 @@ nav a {
   text-transform: uppercase;
 
   transition: 0.3s;
+
+  padding: 6px 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  line-height: 1.2;
 }
 
 nav a:hover {
@@ -188,6 +208,8 @@ h2 {
   font-weight: normal;
 
   letter-spacing: 1px;
+
+  line-height: 1.5;
 }
 
 .section-title {
@@ -209,6 +231,31 @@ h2 {
   letter-spacing: 3px;
 
   text-transform: uppercase;
+
+  line-height: 1.4;
+}
+
+/* =========================
+   TRADUCCIONES EN INGLÉS
+========================= */
+
+.en {
+
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 0.9em;
+
+  font-style: italic;
+
+  color: #7a756f;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.5px;
+
+  text-transform: none;
 }
 
 /* =========================
@@ -327,7 +374,7 @@ iframe {
 
   width: 38%;
 
-   flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .hotel-img img {
@@ -448,8 +495,6 @@ iframe {
 
   nav a {
 
-    margin: 0 10px;
-
     font-size: 10px;
 
     letter-spacing: 1px;
@@ -542,15 +587,30 @@ class="olive bottom">
 
 <nav>
 
-  <a href="javascript:void(0)" onclick="show('inicio')">Inicio</a>
+  <a href="javascript:void(0)" onclick="show('inicio')">
+    Inicio
+    <span class="en">Home</span>
+  </a>
 
-  <a href="javascript:void(0)" onclick="show('rsvp')">RSVP</a>
+  <a href="javascript:void(0)" onclick="show('rsvp')">
+    RSVP
+    <span class="en">Confirmation</span>
+  </a>
 
-  <a href="javascript:void(0)" onclick="show('regalo')">Regalo</a>
+  <a href="javascript:void(0)" onclick="show('regalo')">
+    Regalo
+    <span class="en">Gift</span>
+  </a>
 
-  <a href="javascript:void(0)" onclick="show('hoteles')">Hoteles</a>
+  <a href="javascript:void(0)" onclick="show('hoteles')">
+    Hoteles
+    <span class="en">Hotels</span>
+  </a>
 
-  <a href="javascript:void(0)" onclick="show('contacto')">Contacto</a>
+  <a href="javascript:void(0)" onclick="show('contacto')">
+    Contacto
+    <span class="en">Contact</span>
+  </a>
 
 </nav>
 
@@ -580,26 +640,51 @@ class="olive bottom">
 
   <h1>Iria & Alberto</h1>
 
-  <h2>¡Nos casamos!</h2>
+  <h2>
+    ¡Nos casamos!
+    <span class="en">We're getting married!</span>
+  </h2>
 
   <div class="details">
 
-    <p class="section-title">Ceremonia</p>
+    <p class="section-title">
+      Ceremonia
+      <span class="en">Ceremony</span>
+    </p>
 
     <p>
       <strong>Lugar:</strong><br>
       Basílica de la Concepción de Nuestra Señora
+
+      <span class="en">
+        <strong>Venue:</strong><br>
+        Basílica de la Concepción de Nuestra Señora
+      </span>
     </p>
 
     <p>
       <strong>Fecha y hora:</strong><br>
       Sábado 5 de diciembre de 2026 · 13:00
+
+      <span class="en">
+        <strong>Date & Time:</strong><br>
+        Saturday, December 5th 2026 · 1:00 PM
+      </span>
     </p>
 
-    <p class="section-title">Celebración</p>
+    <p class="section-title">
+      Celebración
+      <span class="en">Reception</span>
+    </p>
 
     <p>
-      El Soto de Mónico <br> C. del Casino, 28817 Los Santos de la Humosa, Madrid, Spain
+      El Soto de Mónico <br>
+      C. del Casino, 28817 Los Santos de la Humosa, Madrid, Spain
+
+      <span class="en">
+        El Soto de Mónico <br>
+        C. del Casino, 28817 Los Santos de la Humosa, Madrid, Spain
+      </span>
     </p>
 
     <div class="map-container">
@@ -620,7 +705,10 @@ class="olive bottom">
 
   <div class="card">
 
-    <h2>Confirma tu asistencia</h2>
+    <h2>
+      Confirma tu asistencia
+      <span class="en">Confirm your attendance</span>
+    </h2>
 
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLSfJnLEoPMS9bzN-dqMvwfJbVoZV30Urgz9SjQ_dJ4c9mKJWww/viewform?embedded=true"
@@ -638,13 +726,36 @@ class="olive bottom">
 
   <div class="card">
 
-    <h2>Regalo</h2>
+    <h2>
+      Regalo
+      <span class="en">Gift</span>
+    </h2>
 
     <p>
-<strong>Gracias por compartir con nosotros este día tan especial.</strong> <br> 
-       Si queréis contribuir a nuestra nueva aventura juntos os dejamos aquí nuestro número de cuenta: <br>
+
+      <strong>
+        Gracias por compartir con nosotros este día tan especial.
+      </strong>
+
+      <span class="en">
+        <strong>
+          Thank you for celebrating this special day with us.
+        </strong>
+      </span>
+
+      <br><br>
+
+      Si queréis contribuir a nuestra nueva aventura juntos os dejamos aquí nuestro número de cuenta:
+
+      <span class="en">
+        If you would like to contribute to our new adventure together, here is our bank account number:
+      </span>
+
+      <br><br>
+
       <strong>IBAN:</strong><br>
       ES43 1583 0001 1291 8231 0500
+
     </p>
 
   </div>
@@ -657,13 +768,29 @@ class="olive bottom">
 
   <div class="card">
 
-    <h2>Hoteles</h2>
+    <h2>
+      Hoteles
+      <span class="en">Hotels</span>
+    </h2>
 
     <p class="hoteles-texto">
+
       Hay muchos hoteles donde os podéis alojar.
+
+      <span class="en">
+        There are many hotels where you can stay.
+      </span>
+
+      <br><br>
+
       Hemos conseguido códigos de descuento en los siguientes hoteles,
-      muy cercanos a la Basílica de la Concepción de Nuestra Señora,
-      que os dejamos aquí abajo.
+      muy cercanos a la Basílica de la Concepción de Nuestra Señora.
+
+      <span class="en">
+        We have arranged discount codes for the following hotels,
+        located very close to the Basilica.
+      </span>
+
     </p>
 
     <!-- HOTEL 1 -->
@@ -696,7 +823,15 @@ class="olive bottom">
 
             <strong>Código de descuento</strong>
 
+            <span class="en">Discount code</span>
+
+            <br><br>
+
             Aquí podéis añadir cómo funciona el código de descuento.
+
+            <span class="en">
+              Here you can explain how the discount code works.
+            </span>
 
           </div>
 
@@ -734,15 +869,19 @@ class="olive bottom">
 
           <div class="codigo-box">
 
-            <strong>Código de descuento</strong><br>
+            <strong>Código de descuento</strong>
 
-            Introducir el siguiente código al reservar para obtener un 15% de descuento para las noches del 4 y 5 de diciembre:
-
-            <strong>IRIAYALBERTO</strong>
+            <span class="en">Discount code</span>
 
             <br><br>
 
-            Please add the following code when booking for a 15% discount for the nights of 4th and 5th of December:
+            Introducir el siguiente código al reservar para obtener un 15% de descuento para las noches del 4 y 5 de diciembre:
+
+            <span class="en">
+              Please add the following code when booking to receive a 15% discount for the nights of December 4th and 5th:
+            </span>
+
+            <br><br>
 
             <strong>IRIAYALBERTO</strong>
 
@@ -764,10 +903,21 @@ class="olive bottom">
 
   <div class="card">
 
-    <h2>Contacto</h2>
+    <h2>
+      Contacto
+      <span class="en">Contact</span>
+    </h2>
 
     <p>
-      Si tenéis cualquier duda relacionada con la boda, podéis escribirnos o llamarnos:
+
+      Si tenéis cualquier duda relacionada con la boda,
+      podéis escribirnos o llamarnos:
+
+      <span class="en">
+        If you have any questions regarding the wedding,
+        feel free to call or message us:
+      </span>
+
     </p>
 
     <p style="margin-top:40px; line-height:2;">
