@@ -369,13 +369,43 @@ iframe {
   transform: translateY(-4px);
 }
 
-.hotel-link {
+.hotel-card {
 
   display: flex;
 
-  text-decoration: none;
+  background: rgba(255,255,255,0.96);
+
+  border: 1px solid #e5ddd3;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  margin-top: 28px;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.05);
+}
+
+.hotel-card:hover {
+
+  transform: translateY(-4px);
+}
+
+.hotel-name-link {
 
   color: inherit;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.hotel-name-link:hover {
+
+  opacity: 0.7;
 }
 
 .hotel-img {
@@ -547,7 +577,7 @@ iframe {
     display: none;
   }
 
-  .hotel-link {
+  .hotel-card {
 
     flex-direction: column;
   }
